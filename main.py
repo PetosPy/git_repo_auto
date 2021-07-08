@@ -7,8 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-EMAIL = "PetosPy"
-PASSWORD = "Tempo@290"
+EMAIL = "email"
+PASSWORD = "password"
 webdriver_path = "C:/development/chromedriver.exe"
 
 REPO_NAME = "git_repo_auto"
@@ -26,8 +26,10 @@ sign_in.click()
 time.sleep(5)
 username = driver.find_element_by_name('login')
 password = driver.find_element_by_name('password')
+time.sleep(1)
 username.send_keys(EMAIL)
 password.send_keys(PASSWORD)
+time.sleep(1)
 password.send_keys(Keys.ENTER)
 
 ##### 2. Create repo #####
